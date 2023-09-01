@@ -19,12 +19,13 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-3. Exporting Environment variables
+3. Exporting Environment variables and migrate
 
 ``` shell
 EXPORT DB_URI="postgresql+psycopg2://test:test@localhost:5432/test"
-```
 
+alembic upgrade head
+```
 4. Running uvicorn server
 
 ``` shell
